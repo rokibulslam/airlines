@@ -5,49 +5,36 @@ import bird from "../../assets/bird.png";
 import FlightCard from "../../Component/FlightCard/FlightCard";
 const Result = () => {
   return (
-    <div className="mx-4  flex justify-center">
+    <div className="mx-4  flex justify-center md:justify-start lg:justify-start">
       <div className="space-y-2">
-        <h1 className="text-lg text-blue-900 font-bold">
-          {" "}
-          Showing Results for
-        </h1>
+        <h1 className="text-lg text-black font-bold">Showing Results for</h1>
         <p className="text-gray-500">
           One Way flight| Adult(1) | Economy | 29 Jan 2023
         </p>
-        <p className="text-blue-900 font-bold "> Airport Name</p>
+        <p className="text-black font-bold "> Airport Name</p>
         {/* Filter */}
-        <div className="flex space-x-2">
-          <button className="border border-red-600 px-3 py-2 rounded-md">
+        <div className="flex flex-wrap space-x-2 gap-y-2">
+          <button className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg">
             13:14
           </button>
-          <button className="border px-3 py-2 rounded-md bg-cyan-900 text-gray-100">
+          <button className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg">
             Previous Day
           </button>
-          <button
-            className="border px-3 py-2 rounded-md bg-red-600
-         text-gray-100"
-          >
+          <button className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg">
             Next Day
           </button>
-          <button className="border px-3 py-2 rounded-md  bg-cyan-900 text-gray-100">
+          <button className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg">
             CM%
           </button>
-        </div>
-        {/* Filter */}
-        <div className="flex space-x-2">
-          <button
-            className="border px-5 py-2 bg-red-600
-         text-gray-100 rounded-md shadow-lg"
-          >
+          <button className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg">
             Modify Search
           </button>
-          <button
-            className="border px-5 py-2  bg-red-600
-         text-gray-100 rounded-md shadow-lg"
-          >
+          <button className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg">
             Filter
           </button>
         </div>
+        {/* Filter */}
+        <div className="flex space-x-2"></div>
         <div className="flex items-center space-x-2">
           <span className="text-2xl">
             <BsFillArrowLeftCircleFill />
@@ -75,7 +62,10 @@ const Result = () => {
           </span>
         </div>
         {/* card section  */}
-        <div className="">
+        <div className="flex flex-wrap gap-4 pt-3">
+          <FlightCard />
+          <FlightCard />
+          <FlightCard />
           <FlightCard />
         </div>
       </div>
