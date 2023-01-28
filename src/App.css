@@ -1,0 +1,14 @@
+.app{
+  overflow: hidden;
+}
+.custom-shadow-sm{
+  box-shadow: rgba(1, 129, 101, 0.432) 0px 1px 5px 0px;
+}
+.custom-btn{
+  padding: 5px 15px 5px 15px;
+  border-radius:  20px 3px 20px 3px;
+}
+.book-now {
+background: linear-gradient(90deg, rgb(126, 149, 177), rgb(13, 80, 143));
+  
+}
