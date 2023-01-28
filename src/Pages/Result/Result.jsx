@@ -2,7 +2,7 @@ import React from 'react'
 
 const Result = () => {
   return (
-    <div>Result</div>
+    <div className='text-3xl font-bold'>Result</div>
   )
 }
 
