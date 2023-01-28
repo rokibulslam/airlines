@@ -10,7 +10,7 @@ import {
 } from "react-icons/md";
 const FlightCard = () => {
   return (
-    <div className="custom-shadow-sm w-[400px]">
+    <div className="custom-shadow-sm w-[350px]">
       <div className="space-y-2 p-3">
         {/* Time  */}
         <div className="flex justify-between">
