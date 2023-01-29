@@ -1,40 +1,227 @@
 import React from 'react'
+import { FaPlaneDeparture, FaPlaneArrival } from "react-icons/fa";
 
 const OneWay = () => {
   return (
-    <div className="space-y-4 pt-10">
-      <div className="custom-shadow-sm py-5 px-3">
-        <p className="text-xs text-gray-500 font-bold">From</p>
-        <h1 className="text-purple-800 text-xl">Dhaka</h1>
-        <p className="text-xs text-gray-500 font-bold">Hazrat Shahajalal</p>
-      </div>
-      <div className="custom-shadow-sm py-5 px-3">
-        <p className="text-xs text-gray-500 font-bold">To</p>
-        <h1 className="text-purple-800 text-xl">Dhaka</h1>
-        <p className="text-xs text-gray-500 font-bold">Hazrat Shahajalal</p>
-      </div>
-      {/* Date  */}
-      <div className="flex justify-between custom-shadow-sm py-5 px-3">
-        <div>
-          <p className="text-xs text-gray-500 font-bold">Travel Date</p>
-          <h1 className="text-purple-800 text-xl">29 Jan 23</h1>
-          <p className="text-xs text-gray-500 font-bold">sunday</p>
+    <form>
+      <div className="space-y-2">
+        <div
+          style={{ background: "#F5EEFD" }}
+          className="flex flex-col p-5 rounded-lg space-y-3"
+        >
+          <label
+            className="text-gray-600 text-xs flex justify-between"
+            htmlFor=""
+          >
+            <span>Form</span>
+            <span className="text-2xl text-black">
+              <FaPlaneDeparture />
+            </span>
+          </label>
+
+          <input
+            placeholder="New York"
+            style={{ background: "#F5EEFD" }}
+            className="outline-none"
+            type="text"
+          />
+          <label className="text-xs" htmlFor="">
+            DAC, Hazrat Shahjalal International
+          </label>
         </div>
-        <div>
-          <p className="text-xs text-gray-500 font-bold">Travel Date</p>
-          <p className="text-xs text-purple-800 font-bold">Save Money</p>
-          <p className="text-xs text-purple-800 font-bold">on return flight</p>
+        <div
+          style={{ background: "#F5EEFD" }}
+          className="flex flex-col p-5 rounded-lg space-y-3"
+        >
+          <label
+            className="text-gray-600 text-xs flex justify-between"
+            htmlFor=""
+          >
+            <span>To</span>
+            <span className="text-2xl text-black">
+              <FaPlaneArrival />
+            </span>
+          </label>
+
+          <input
+            placeholder="New York"
+            style={{ background: "#F5EEFD" }}
+            className="outline-none"
+            type="text"
+          />
+          <label className="text-xs" htmlFor="">
+            DAC, Hazrat Shahjalal International
+          </label>
+        </div>
+        <div
+          style={{ background: "#F5EEFD" }}
+          className="flex items-center justify-between p-5 rounded-lg space-y-3"
+        >
+          <div className="flex flex-col justify-center">
+            <label
+              className="text-gray-600 text-xs flex justify-between"
+              htmlFor=""
+            >
+              From
+            </label>
+
+            <input
+              placeholder="New York"
+              style={{ background: "#F5EEFD" }}
+              className="outline-none"
+              type="date"
+            />
+            <label className="text-xs" htmlFor="">
+              Thursday
+            </label>
+          </div>
+          <div className="flex flex-col justify-center">
+            <label
+              className="text-gray-600 text-xs flex justify-between"
+              htmlFor=""
+            >
+              From
+            </label>
+
+            <input
+              placeholder=""
+              style={{ background: "#F5EEFD" }}
+              className="outline-none"
+              type="date"
+            />
+            <label className="text-xs" htmlFor="">
+              Thursday
+            </label>
+          </div>
+        </div>
+        <div
+          style={{ background: "#F5EEFD" }}
+          className="flex flex-col p-5 rounded-lg space-y-3"
+        >
+          <label className="text-gray-600 text-xs" htmlFor="">
+            Passenger, Class
+          </label>
+
+          <input
+            placeholder="0"
+            style={{ background: "#F5EEFD" }}
+            className="outline-none"
+            type="text"
+          />
+          <label className="text-xs" htmlFor="">
+            Business
+          </label>
+        </div>
+        <div className="h-[2px] bg-purple-600"></div>
+        <div
+          style={{ background: "#F5EEFD" }}
+          className="flex flex-col p-5 rounded-lg space-y-3"
+        >
+          <label
+            className="text-gray-600 text-xs flex justify-between"
+            htmlFor=""
+          >
+            <span>Form</span>
+            <span className="text-2xl text-black">
+              <FaPlaneDeparture />
+            </span>
+          </label>
+
+          <input
+            placeholder="New York"
+            style={{ background: "#F5EEFD" }}
+            className="outline-none"
+            type="text"
+          />
+          <label className="text-xs" htmlFor="">
+            DAC, Hazrat Shahjalal International
+          </label>
+        </div>
+        <div
+          style={{ background: "#F5EEFD" }}
+          className="flex flex-col p-5 rounded-lg space-y-3"
+        >
+          <label
+            className="text-gray-600 text-xs flex justify-between"
+            htmlFor=""
+          >
+            <span>To</span>
+            <span className="text-2xl text-black">
+              <FaPlaneArrival />
+            </span>
+          </label>
+
+          <input
+            placeholder="New York"
+            style={{ background: "#F5EEFD" }}
+            className="outline-none"
+            type="text"
+          />
+          <label className="text-xs" htmlFor="">
+            DAC, Hazrat Shahjalal International
+          </label>
+        </div>
+        <div
+          style={{ background: "#F5EEFD" }}
+          className="flex items-center justify-between p-5 rounded-lg space-y-3"
+        >
+          <div className="flex flex-col justify-center">
+            <label
+              className="text-gray-600 text-xs flex justify-between"
+              htmlFor=""
+            >
+              From
+            </label>
+
+            <input
+              placeholder="New York"
+              style={{ background: "#F5EEFD" }}
+              className="outline-none"
+              type="date"
+            />
+            <label className="text-xs" htmlFor="">
+              Thursday
+            </label>
+          </div>
+          <div className="flex flex-col justify-center">
+            <label
+              className="text-gray-600 text-xs flex justify-between"
+              htmlFor=""
+            >
+              From
+            </label>
+
+            <input
+              placeholder=""
+              style={{ background: "#F5EEFD" }}
+              className="outline-none"
+              type="date"
+            />
+            <label className="text-xs" htmlFor="">
+              Thursday
+            </label>
+          </div>
+        </div>
+        <div
+          style={{ background: "#F5EEFD" }}
+          className="flex flex-col p-5 rounded-lg space-y-3"
+        >
+          <label className="text-gray-600 text-xs" htmlFor="">
+            Passenger, Class
+          </label>
+
+          <input
+            placeholder="0"
+            style={{ background: "#F5EEFD" }}
+            className="outline-none"
+            type="text"
+          />
+          <label className="text-xs" htmlFor="">
+            Business
+          </label>
         </div>
       </div>
-      <div className="custom-shadow-sm py-5 px-3">
-        <p className="text-xs text-gray-500 font-bold">Travel Date</p>
-        <h1 className="text-purple-800 text-xl">1 Traveler</h1>
-        <p className="text-xs text-gray-500 font-bold">on return flight</p>
-      </div>
-      <button className="bg-purple-800 text-white py-5 rounded-lg text-2xl hover:bg-red-600 ease-in duration-300">
-        Search
-      </button>
-    </div>
+    </form>
   );
 }
 

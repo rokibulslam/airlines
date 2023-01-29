@@ -1,6 +1,7 @@
 .app{
   overflow: hidden;
   min-width: 100vw;
+  min-height: 100vh;
 }
 .custom-shadow-sm{
   box-shadow: rgba(1, 129, 101, 0.432) 0px 1px 5px 0px;
