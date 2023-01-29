@@ -5,14 +5,15 @@ import { MdOutlineAirlineSeatReclineNormal } from "react-icons/md";
 import {AiOutlineArrowRight} from "react-icons/ai"
 const FlightCard = () => {
   return (
-    <div className="custom-shadow-sm">
-      <p className="text-purple-800 font-bold px-2 text-center">
+    <div className="custom-shadow-sm w-full">
+      <p className="text-purple-800 font-bold px-2 text-start pb-2">
         US-Bangla Airlines |
         <span className="tex  text-sm text-black font-light">BS 145</span>{" "}
       </p>
-      <div className="flex flex-col lg:flex-row p-3 lg:space-x-10 justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-7 md:grid-cols-7  px-2 gap-x-5 gap-y-5">
+        {/* <div className="flex flex-col lg:flex-row md:flex-row justify-between p-3 gap-y-5 md:gap-x-5"> */}
         {/* FROM TO  */}
-        <div className="flex justify-between lg:space-x-10">
+        <div className="flex justify-between gap-x-2 lg:col-span-3 md:col-span-3">
           {/* From  */}
           <div>
             <p className="font-bold">DAC - 11:15</p>
@@ -42,7 +43,7 @@ const FlightCard = () => {
           </div>
         </div>
         {/* OTHERS  */}
-        <div className="flex justify-between items-start lg:space-x-10 space-x-3">
+        <div className="flex justify-between gap-x-2 lg:col-span-3 md:col-span-3">
           {/* Econnomy */}
           <div>
             <p>Economy</p>
@@ -64,14 +65,17 @@ const FlightCard = () => {
             </div>
           </div>
           {/* agent */}
-          <div className="text-start">
+          <div className="lg:text-start text-end">
             <p className="font-bold ">Customer Fare 10,133</p>
             <p className="text-purple-800 text-sm">Client Fare 11,535</p>
             <p className="text-purple-800 text-sm">Commission 11,535</p>
           </div>
         </div>
         {/* Button  */}
-        <div className="flex justify-between lg:justify-center lg:space-y-3 lg:flex-col bg-gray-400 items-center rounded-r-md lg:bg-inherit">
+        <div
+          className=" lg:col-span-1 md:col-span-1 flex justify-between items-center 
+        lg:justify-center lg:items-end lg:space-y-3 lg:flex-col md:flex-col bg-gray-400  rounded-r-md md:bg-inherit lg:bg-inherit"
+        >
           <p className="font-bold text-sm text-black px-2">Flight Details</p>
           <div className="flex items-center gap-x-2 px-3 py-1 rounded-md bg-purple-800 text-gray-100 hover:bg-red-600 ease-in duration-300 hover:shadow-lg">
             <button>Book Now</button>

@@ -2,11 +2,18 @@ import logo from './logo.svg';
 import './App.css';
 import Result from './Pages/Result/Result';
 import Search from './Pages/Search/Search';
+import Filter from './Component/Filter/Filter';
 
 function App() {
   return (
-    <div className="App">
-      <Result />
+    <div className="App lg:grid grid-cols-12">
+      <div className="col-span-2">
+        <Filter />
+      </div>
+      <div className="col-span-10 ">
+        <Result />
+      </div>
+
       {/* <Search /> */}
     </div>
   );

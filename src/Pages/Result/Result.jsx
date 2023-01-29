@@ -69,7 +69,7 @@ const Result = () => {
           </span>
         </div>
         {/* card section  */}
-        <div className="flex flex-wrap lg:flex-col gap-y-4 pt-3 justify-center">
+        <div className="flex flex-wrap lg:flex-col gap-4 pt-3 justify-center">
           <FlightCard />
           <FlightCard />
           <FlightCard />
