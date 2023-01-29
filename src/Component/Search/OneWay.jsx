@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaPlaneDeparture, FaPlaneArrival } from "react-icons/fa";
 
 const OneWay = () => {
+  const [modal, setModal] = useState(false);
+
+  const [popup, setPop] = useState(false);
+  const handleClickOpen = () => {
+    setPop(!popup);
+  };
+  const closePopup = () => {
+    setPop(false);
+  };
   return (
     <form>
       <div className="space-y-2">
