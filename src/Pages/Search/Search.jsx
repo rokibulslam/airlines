@@ -23,7 +23,7 @@ const Search = () => {
   return (
     <div>
       <div className="space-x-2 space-y-2 mx-5 mt-5">
-        <div className="text-center space-x-2">
+        <div className="text-center flex flex-wrap justify-center gap-3">
           {filter.map((item, index) => (
             <button
               onClick={() => activator(item)}
@@ -39,7 +39,7 @@ const Search = () => {
             </button>
           ))}
         </div>
-        <div>{data}</div>
+        <div className='pt-10 flex justify-center items-center'>{data}</div>
       </div>
     </div>
   );
