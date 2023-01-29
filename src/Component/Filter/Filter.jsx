@@ -1,24 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { IoMdArrowDropupCircle } from "react-icons/io";
 import { TbCurrencyTaka } from "react-icons/tb";
-const useWindowWidth = () => {
-  const [size, setSize] = useState([window.innerWidth])
-  useEffect(() => {
-    const handleResize = () => {
-      setSize([window.innerWidth])
-    }
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize)
-    }
-  }, []);
-  return size;
-}
+
 const Filter = () => {
-  const [width] = useWindowWidth()
-  console.log(width);
+  // const [width] = useWindowWidth()
+  // console.log(width);
   return (
-    <div className="invisible lg:visible px-5 space-y-10">
+    <div className="px-5 space-y-10">
       {/* filter */}
       <div className="">
         <div className="flex justify-between">

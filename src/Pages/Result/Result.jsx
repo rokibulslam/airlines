@@ -1,11 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill } from 'react-icons/bs'
 import plane from "../../assets/plane.png";
 import bird from "../../assets/bird.png";
 import FlightCard from "../../Component/FlightCard/FlightCard";
+import { useWindowWidth } from "../../hooks/useWindowWidth";
 const Result = () => {
+  const [size] = useWindowWidth()
+  const [modal, setModal] = useState(false);
+
+  const toggleModal = () => {
+    setModal(!modal);
+  };
+
+  if (modal) {
+    document.body.classList.add("active-modal");
+  } else {
+    document.body.classList.remove("active-modal");
+  }
+  console.log(size)
   return (
-    <div className="mx-4  flex justify-center">
+    <div className="mx-4">
       <div className="space-y-2 w-full">
         <div className="flex flex-col flex-wrap gap-y-2 lg:flex-row justify-between">
           <div>
@@ -35,9 +49,16 @@ const Result = () => {
             <button className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg">
               Modify Search
             </button>
-            <button className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg">
-              Filter
-            </button>
+            {size < 1022 ? (
+              <button
+                onClick={toggleModal}
+                className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg"
+              >
+                Filter
+              </button>
+            ) : (
+              ""
+            )}
           </div>
         </div>
         {/* Filter */}

@@ -5,7 +5,7 @@ import { MdOutlineAirlineSeatReclineNormal } from "react-icons/md";
 import {AiOutlineArrowRight} from "react-icons/ai"
 const FlightCard = () => {
   return (
-    <div className="custom-shadow-sm w-full">
+    <div className="custom-shadow-sm w-full pb-3">
       <p className="text-purple-800 font-bold px-2 text-start pb-2">
         US-Bangla Airlines |
         <span className="tex  text-sm text-black font-light">BS 145</span>{" "}
