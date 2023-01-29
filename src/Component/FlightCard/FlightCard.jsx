@@ -2,14 +2,18 @@ import React from "react";
 import { FaPlane } from "react-icons/fa";
 import { RiLuggageCartFill } from "react-icons/ri";
 import { MdOutlineAirlineSeatReclineNormal } from "react-icons/md";
-import {AiOutlineArrowRight} from "react-icons/ai"
+import { AiOutlineArrowRight } from "react-icons/ai"
+import plane from '../../assets/plane.png'
 const FlightCard = () => {
   return (
     <div className="custom-shadow-sm w-full pb-3">
-      <p className="text-purple-800 font-bold px-2 text-start pb-2">
-        US-Bangla Airlines |
-        <span className="tex  text-sm text-black font-light">BS 145</span>{" "}
-      </p>
+      <div className="flex items-center">
+        <img height="30px" width="40px" src={plane} alt="" />
+        <p className="text-purple-800 font-bold px-2 text-start pb-2">
+          US-Bangla Airlines |
+          <span className="tex  text-sm text-black font-light">BS 145</span>{" "}
+        </p>
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-7 md:grid-cols-7  px-2 gap-x-5 gap-y-5">
         {/* <div className="flex flex-col lg:flex-row md:flex-row justify-between p-3 gap-y-5 md:gap-x-5"> */}
         {/* FROM TO  */}
@@ -73,16 +77,16 @@ const FlightCard = () => {
         </div>
         {/* Button  */}
         <div
-          className=" lg:col-span-1 md:col-span-1 flex justify-between items-center 
-        lg:justify-center lg:items-end lg:space-y-3 lg:flex-col md:flex-col bg-gray-400  rounded-r-md md:bg-inherit lg:bg-inherit"
+          className=" lg:col-span-1 md:col-span-1 flex justify-between flex-row-reverse items-center 
+        lg:justify-center lg:items-end lg:space-y-3 lg:flex-col md:flex-col bg-gray-400  rounded-r-md md:bg-inherit lg:bg-inherit "
         >
-          <p className="font-bold text-sm text-black px-2">Flight Details</p>
           <div className="flex items-center gap-x-2 px-3 py-1 rounded-md bg-purple-800 text-gray-100 hover:bg-red-600 ease-in duration-300 hover:shadow-lg">
             <button>Book Now</button>
             <span>
               <AiOutlineArrowRight />
             </span>
           </div>
+          <p className="font-bold text-sm text-black px-2">Flight Details</p>
         </div>
       </div>
     </div>
