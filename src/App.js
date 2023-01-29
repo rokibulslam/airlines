@@ -7,14 +7,14 @@ import Filter from './Component/Filter/Filter';
 function App() {
   return (
     <div className="App lg:grid grid-cols-12">
-      <div className="hidden lg:col-span-2  lg:block ">
+      {/* <div className="hidden lg:col-span-2  lg:block ">
         <Filter />
       </div>
       <div className="col-span-12 md:col-span-10">
         <Result />
-      </div>
+      </div> */}
 
-      {/* <Search /> */}
+      <Search />
     </div>
   );
 }
