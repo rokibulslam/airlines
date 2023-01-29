@@ -4,22 +4,21 @@ import plane from "../../assets/plane.png";
 import bird from "../../assets/bird.png";
 import FlightCard from "../../Component/FlightCard/FlightCard";
 import { useWindowWidth } from "../../hooks/useWindowWidth";
+import Filter from "../../Component/Filter/Filter";
 const Result = () => {
   const [size] = useWindowWidth()
   const [modal, setModal] = useState(false);
 
-  const toggleModal = () => {
-    setModal(!modal);
+  const [popup, setPop] = useState(false);
+  const handleClickOpen = () => {
+    setPop(!popup);
   };
-
-  if (modal) {
-    document.body.classList.add("active-modal");
-  } else {
-    document.body.classList.remove("active-modal");
-  }
+  const closePopup = () => {
+    setPop(false);
+  };
   console.log(size)
   return (
-    <div className="mx-4">
+    <div className="">
       <div className="space-y-2 w-full">
         <div className="flex flex-col flex-wrap gap-y-2 lg:flex-row justify-between">
           <div>
@@ -51,7 +50,7 @@ const Result = () => {
             </button>
             {size < 1022 ? (
               <button
-                onClick={toggleModal}
+                onClick={() => handleClickOpen()}
                 className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg"
               >
                 Filter
@@ -97,6 +96,23 @@ const Result = () => {
           <FlightCard />
         </div>
       </div>
+      {popup ? (
+        <div className="h min-h-screen w-[300px] absolute right-0 top-0 z-10 bg-white">
+          <div>
+            <div className="flex justify-end p-2 ">
+              <button
+                onClick={() => closePopup()}
+                className="bg-red-600 text-white px-2 py-1 rounded-sm right-1"
+              >
+                Close
+              </button>
+            </div>
+            <Filter />
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
