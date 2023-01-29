@@ -5,11 +5,17 @@ import bird from "../../assets/bird.png";
 import FlightCard from "../../Component/FlightCard/FlightCard";
 import { useWindowWidth } from "../../hooks/useWindowWidth";
 import Filter from "../../Component/Filter/Filter";
+import Search from "../../Pages/Search/Search";
 const Result = () => {
   const [size] = useWindowWidth()
-  const [modal, setModal] = useState(false);
-
   const [popup, setPop] = useState(false);
+  const [searchPopup, setSearchPopup] = useState(false);
+  const openSearch = () => {
+    setSearchPopup(!searchPopup)
+  }
+  const closeSearch = () => {
+    setSearchPopup(false)
+  }
   const handleClickOpen = () => {
     setPop(!popup);
   };
@@ -45,7 +51,10 @@ const Result = () => {
             <button className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg">
               CM%
             </button>
-            <button className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg">
+            <button
+              onClick={() => openSearch()}
+              className="border px-3 py-2 rounded-md bg-purple-800 text-gray-100 hover:bg-black ease-in duration-300 hover:shadow-lg"
+            >
               Modify Search
             </button>
             {size < 1022 ? (
@@ -90,6 +99,23 @@ const Result = () => {
         </div>
         {/* card section  */}
         <div className="flex flex-wrap lg:flex-col gap-4 pt-3 justify-center">
+          {searchPopup ? (
+            <div className="h min-h-screen absolute right-0 top-0 z-10 bg-white">
+              <div>
+                <div className="flex justify-end p-2 ">
+                  <button
+                    onClick={() => closeSearch()}
+                    className="bg-red-600 text-white px-2 py-1 rounded-sm right-1"
+                  >
+                    Close
+                  </button>
+                </div>
+                <Search />
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
           <FlightCard />
           <FlightCard />
           <FlightCard />
