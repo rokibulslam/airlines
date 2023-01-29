@@ -2,7 +2,7 @@ import React from 'react'
 
 const OneWay = () => {
   return (
-    <div className="flex flex-col justify-center space-y-4 pt-10">
+    <div className="space-y-4 pt-10">
       <div className="custom-shadow-sm py-5 px-3">
         <p className="text-xs text-gray-500 font-bold">From</p>
         <h1 className="text-purple-800 text-xl">Dhaka</h1>

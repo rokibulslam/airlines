@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import MultiCity from '../../Component/Search/MultiCity';
 import OneWay from '../../Component/Search/OneWay';
 
 const Search = () => {
@@ -14,6 +15,10 @@ const Search = () => {
   let data;
   if (active==="ONE WAY") {
     data=<OneWay />
+  } else if (active === "ROUND WAY") {
+    data=<OneWay />
+  } else if (active === "MULTI CITY") {
+    data=<MultiCity />
   }
   return (
     <div>
