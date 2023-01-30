@@ -181,15 +181,7 @@ const MultiCity = () => {
           style={{ background: "#F5EEFD" }}
           className="flex items-center justify-between p-2 rounded-lg "
         >
-          <div className="flex flex-col justify-center">
-            <label
-              className="text-gray-600 text-xs flex justify-between"
-              htmlFor=""
-            >
-              From
-            </label>
-
-            <input
+          <div className="flex flex-col 
               placeholder="New York"
               style={{ background: "#F5EEFD" }}
               className="outline-none"
