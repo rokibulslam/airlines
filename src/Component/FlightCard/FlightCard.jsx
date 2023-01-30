@@ -47,7 +47,7 @@ const FlightCard = () => {
           </div>
         </div>
         {/* OTHERS  */}
-        <div className="flex justify-between gap-x-2 lg:col-span-3 md:col-span-3">
+        <div className="flex justify-between md:justify-around gap-x-2 lg:col-span-3 md:col-span-3">
           {/* Econnomy */}
           <div className="space-y-3">
             <p>Economy</p>

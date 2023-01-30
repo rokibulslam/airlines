@@ -31,7 +31,7 @@ const Result = () => {
             <h1 className="text-lg text-black font-bold">
               Showing Results for
             </h1>
-            <p className="text-gray-500">
+            <p className="text-xs text-gray-500">
               One Way flight| Adult(1) | Economy | 29 Jan 2023
             </p>
             <p className="text-black font-bold "> Airport Name</p>
@@ -71,10 +71,28 @@ const Result = () => {
         </div>
         {/* Filter */}
 
-        <div className="flex items-center space-x-2">
-          <span className="text-2xl">
+        <div className="grid grid-cols-2 md:grid-cols-4 items-center gap-x-3">
+          {/* <span className="text-2xl">
             <BsFillArrowLeftCircleFill />
-          </span>
+          </span> */}
+          <div className="flex items-center justify-center custom-shadow-sm rounded-md px-8 py-1 space-x-4">
+            <div>
+              <img height="30px" width="40px" src={plane} alt="" />
+            </div>
+            <div className="flex flex-col justify-center items-center text-smm ">
+              <p>BG</p>
+              <p>4,800</p>
+            </div>
+          </div>
+          <div className="flex items-center justify-center custom-shadow-sm rounded-md px-8 py-1 space-x-4">
+            <div>
+              <img height="30px" width="40px" src={plane} alt="" />
+            </div>
+            <div className="flex flex-col justify-center items-center text-smm ">
+              <p>BG</p>
+              <p>4,800</p>
+            </div>
+          </div>
           <div className="flex items-center justify-center custom-shadow-sm rounded-md px-8 py-1 space-x-4">
             <div>
               <img height="30px" width="40px" src={plane} alt="" />
@@ -93,9 +111,9 @@ const Result = () => {
               <p>4,800</p>
             </div>
           </div>
-          <span className="text-2xl">
+          {/* <span className="text-2xl">
             <BsFillArrowRightCircleFill />
-          </span>
+          </span> */}
         </div>
         {/* card section  */}
         <div className="flex flex-wrap lg:flex-col gap-4 pt-3 justify-center">
