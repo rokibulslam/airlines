@@ -6,7 +6,7 @@ const Filter = () => {
   // const [width] = useWindowWidth()
   // console.log(width);
   return (
-    <div className="px-5 space-y-10">
+    <div className="px-5 pt-5 space-y-10">
       {/* filter */}
       <div className="">
         <div className="flex justify-between">

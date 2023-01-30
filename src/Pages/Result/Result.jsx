@@ -24,7 +24,7 @@ const Result = () => {
   };
   console.log(size)
   return (
-    <div className="relative">
+    <div className=" pt-5 px-5">
       <div className="space-y-2 w-full">
         <div className="flex flex-col flex-wrap gap-y-2 lg:flex-row justify-between">
           <div>
@@ -124,7 +124,7 @@ const Result = () => {
         </div>
       </div>
       {popup ? (
-        <div className="w-[300px] absolute right-0 top-0 z-10 bg-purple-50 shadow-2xl">
+        <div className="w-[300px] absolute right-0 top-10 z-10 bg-purple-50 shadow-2xl">
           <div>
             <div className="flex justify-end p-2 ">
               <button
