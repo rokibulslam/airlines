@@ -40,8 +40,8 @@ const FlightCard = () => {
             </p>
           </div>
           {/* To  */}
-          <div className="font-bold lg:text-start text-end">
-            <p>DAC - 11:15</p>
+          <div className=" lg:text-start text-end">
+            <p className="font-bold">DAC - 11:15</p>
             <p className="">Dhaka, BD</p>
             <p className="text-gray-500 text-sm">Sun Jan 2023</p>
           </div>
@@ -49,7 +49,7 @@ const FlightCard = () => {
         {/* OTHERS  */}
         <div className="flex justify-between gap-x-2 lg:col-span-3 md:col-span-3">
           {/* Econnomy */}
-          <div>
+          <div className="space-y-3">
             <p>Economy</p>
             <div className="flex items-center">
               <p className="text-xl text-purple-800">
@@ -59,13 +59,13 @@ const FlightCard = () => {
             </div>
           </div>
           {/* Refund */}
-          <div>
+          <div className="space-y-3">
             <p className="">Refundable</p>
             <div className="flex items-center">
               <p className="text-xl text-purple-800">
                 <MdOutlineAirlineSeatReclineNormal />
               </p>
-              <p className="text-sm">1 Seat</p>
+              <p className="">1 Seat</p>
             </div>
           </div>
           {/* agent */}
@@ -86,7 +86,7 @@ const FlightCard = () => {
               <AiOutlineArrowRight />
             </span>
           </div>
-          <p className="font-bold text-sm text-black px-2">Flight Details</p>
+          <p className="font-bold text-sm text-black px-2 cursor-pointer">Flight Details</p>
         </div>
       </div>
     </div>

@@ -24,7 +24,7 @@ const Result = () => {
   };
   console.log(size)
   return (
-    <div className="">
+    <div className="relative">
       <div className="space-y-2 w-full">
         <div className="flex flex-col flex-wrap gap-y-2 lg:flex-row justify-between">
           <div>
@@ -99,23 +99,6 @@ const Result = () => {
         </div>
         {/* card section  */}
         <div className="flex flex-wrap lg:flex-col gap-4 pt-3 justify-center">
-          {searchPopup ? (
-            <div className="h min-h-screen absolute right-0 top-0 z-10 bg-white">
-              <div>
-                <div className="flex justify-end p-2 ">
-                  <button
-                    onClick={() => closeSearch()}
-                    className="bg-red-600 text-white px-2 py-1 rounded-sm right-1"
-                  >
-                    Close
-                  </button>
-                </div>
-                <Search />
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
           <FlightCard />
           <FlightCard />
           <FlightCard />
@@ -123,7 +106,7 @@ const Result = () => {
         </div>
       </div>
       {popup ? (
-        <div className="h min-h-screen w-[300px] absolute right-0 top-0 z-10 bg-white">
+        <div className="w-[300px] absolute right-0 top-0 z-10 bg-purple-50 shadow-2xl">
           <div>
             <div className="flex justify-end p-2 ">
               <button
@@ -134,6 +117,23 @@ const Result = () => {
               </button>
             </div>
             <Filter />
+          </div>
+        </div>
+      ) : (
+        ""
+      )}
+      {searchPopup ? (
+        <div className="search-page popup-position shadow-2xl bg-purple-50">
+          <div>
+            <div className="flex justify-end p-2 ">
+              <button
+                onClick={() => closeSearch()}
+                className="bg-red-600 text-white px-2 py-1 rounded-sm right-1"
+              >
+                Close
+              </button>
+            </div>
+            <Search />
           </div>
         </div>
       ) : (

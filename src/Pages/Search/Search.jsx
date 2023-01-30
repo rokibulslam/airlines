@@ -22,8 +22,8 @@ const Search = () => {
     data=<MultiCity />
   }
   return (
-    <div  className="">
-      <div className="space-x-2 space-y-2 mx-5 mt-5 ">
+    <div  className="pb-5 flex flex-col">
+      <div className="space-x-2 space-y-2 mx-5">
         <div className="text-center flex flex-wrap justify-center gap-3">
           {filter.map((item, index) => (
             <button

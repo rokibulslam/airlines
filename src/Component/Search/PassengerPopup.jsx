@@ -2,8 +2,8 @@ import React from 'react'
 import { AiOutlineMinusSquare, AiOutlinePlusSquare } from "react-icons/ai";
 const PassengerPopup = () => {
   return (
-    <div className="w-[300px] mt-10">
-      <div className=" space-y-5 custom-shadow-sm p-3">
+    <div className="w-[300px]">
+      <div className=" space-y-5 p-3">
         <h1 className="text-purple-800">Passenger</h1>
         <div className="flex flex-col gap-y-5">
           <div className="grid grid-cols-5 gap-x-2 items-center text-xs">
